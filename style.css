@@ -172,30 +172,31 @@ html {
     padding: 20px;
   }
 
+  .profiel {
+    height: auto; /* Biarkan tinggi menyesuaikan */
+    padding: 50px 0; /* Beri ruang agar tidak terlalu rapat */
+  }
+
+  .profiel::before {
+    width: 120px;
+    height: 120px;
+  }
+
+  .profiel::after {
+    width: 140px;
+    height: 140px;
+  }
+
   .profiel > img {
-    width: 110px;
-    height: 110px;
-    margin-top: 35px;
+    width: 100px;
+    height: 100px;
+    position: relative; /* Hapus absolute agar responsif */
+    transform: none; /* Hindari transform yang bisa mempengaruhi posisi */
+    margin-top: 20px; /* Jarak antara foto dan lingkaran */
   }
 
   .profiel > h2 {
-    font-size: 20px;
-    margin-top: 200px; /* Tetap turun sekitar 6 cm pada HP */
-  }
-
-  .link {
-    padding: 30px;
-  }
-
-  .link > p {
-    font-size: 20px;
-    margin-bottom: 30px;
-  }
-
-  .link > a {
-    font-size: 14px;
-    padding: 12px;
-    margin-bottom: 20px;
-    max-width: 260px;
+    font-size: 18px;
+    margin-top: 20px; /* Atur agar lebih dekat ke foto */
   }
 }
