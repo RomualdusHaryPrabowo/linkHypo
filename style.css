@@ -3,15 +3,17 @@
   padding: 0;
 }
 
-html {
-  font-family: "Bebas Neue", sans-serif;
+html, body {
+  overflow: hidden; /* Mencegah scroll */
+  height: 100vh; /* Memastikan seluruh layar digunakan */
 }
 
 .container {
+  width: 100%;
   max-width: 400px;
+  height: 100vh;
   margin: auto;
   background: #0a0322;
-  min-height: 100vh;
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   padding: 20px;
@@ -19,8 +21,9 @@ html {
   flex-direction: column;
   align-items: center;
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* Mencegah scroll */
 }
+
 
 .container::before {
   content: "";
