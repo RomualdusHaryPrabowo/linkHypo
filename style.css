@@ -46,9 +46,9 @@ html, body {
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-top: 20px;
+  margin-top: 30px; /* Beri jarak dari atas */
   width: 100%;
-  height: 250px; /* Beri batas tinggi agar tidak terlalu besar */
+  height: auto;
 }
 
 .profiel::before {
@@ -61,6 +61,7 @@ html, body {
   box-shadow: 0 0 15px rgba(169, 1, 109, 0.5);
   animation: spin 8s linear infinite;
   z-index: 1;
+  top: 10px; /* Sesuaikan posisi */
 }
 
 .profiel::after {
@@ -72,6 +73,7 @@ html, body {
   border: 2px dashed rgba(116, 1, 135, 0.6);
   animation: spin-reverse 10s linear infinite;
   z-index: 0;
+  top: 5px; /* Sesuaikan posisi */
 }
 
 .profiel > img {
@@ -79,8 +81,9 @@ html, body {
   height: 120px;
   border-radius: 50%;
   box-shadow: 0 0 12px rgba(220, 215, 215, 0.9);
-  position: relative;
   z-index: 2;
+  position: relative;
+  margin-bottom: 10px; /* Memberi sedikit jarak ke teks */
 }
 
 .profiel > h2 {
@@ -91,8 +94,8 @@ html, body {
   text-transform: uppercase;
   letter-spacing: 1.5px;
   text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
-  margin-top: 20px;
   z-index: 3;
+  margin-top: 0; /* Pastikan tidak ada jarak tambahan */
 }
 
 @keyframes spin {
