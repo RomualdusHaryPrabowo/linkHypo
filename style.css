@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.container {
+  max-width: 400px;
+  margin: auto;
+  background: #0a0322;
+  min-height: 100vh;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #a9016d, #740187);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.profiel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  z-index: 5;
+  height: 300px; /* Pastikan ada ruang cukup untuk elemen */
+}
+
+.profiel::before {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid rgba(169, 1, 109, 0.7);
+  box-shadow: 0 0 15px rgba(169, 1, 109, 0.5);
+  animation: spin 8s linear infinite;
+  z-index: 0;
+}
+
+.profiel::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 2px dashed rgba(116, 1, 135, 0.6);
+  animation: spin-reverse 10s linear infinite;
+  z-index: 0;
+}
+
+
+.profiel > img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(220, 215, 215, 0.9);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+.profiel > h2 {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 100%; /* Sesuaikan untuk turun ke bawah */
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+  margin-top: 250px;
+  position: relative;
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes spin-reverse {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(-360deg); }
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.link > p {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+}
+
+.link > a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  border: 2px solid rgba(220, 215, 215, 0.6);
+  border-radius: 25px;
+  padding: 14px;
+  width: 85%;
+  max-width: 280px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  background: linear-gradient(to right, #a9016d, #740187);
+  box-shadow: 0 0 8px rgba(49, 49, 99, 0.4);
+  margin-bottom: 25px;
+}
+
+.link > a:hover {
+  transform: scale(1.05);
+  border-color: #ffffff;
+  box-shadow: 0 0 15px rgba(220, 215, 215, 1);
+}
+
+.link > a:active {
+  background: linear-gradient(to right, #a9a9a9, #dcd7d7);
+  box-shadow: 0 0 20px rgba(220, 215, 215, 1);
+  transform: scale(0.95);
+}
+
+.foter {
+  text-align: center;
+  padding: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.foter > i {
+  color: #dcd7d7;
+  font-size: 22px;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    max-width: 95%;
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  .profiel > img {
+    width: 110px;
+    height: 110px;
+    margin-top: 35px;
+  }
+
+  .profiel > h2 {
+    font-size: 20px;
+    margin-top: 200px; /* Tetap turun sekitar 6 cm pada HP */
+  }
+
+  .link {
+    padding: 30px;
+  }
+
+  .link > p {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  .link > a {
+    font-size: 14px;
+    padding: 12px;
+    margin-bottom: 20px;
+    max-width: 260px;
+  }
+}
