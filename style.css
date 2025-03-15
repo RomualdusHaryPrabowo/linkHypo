@@ -1,11 +1,11 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Hindari elemen melebihi ukuran */
+  box-sizing: border-box;
 }
 
 html, body {
-  overflow: hidden; /* Mencegah scroll */
+  overflow: hidden;
   width: 100vw;
   height: 100vh;
 }
@@ -13,7 +13,7 @@ html, body {
 .container {
   width: 100vw;
   height: 100vh;
-  background: #0a0322;
+  background: #2d1286;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,7 +41,7 @@ html, body {
   justify-content: center;
   width: 100%;
   position: relative;
-  margin-top: 20px; /* Geser ke bawah */
+  margin-top: -20px; /* Menggeser lebih ke atas */
 }
 
 .profiel::before {
@@ -50,11 +50,11 @@ html, body {
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  border: 4px solid rgba(169, 1, 109, 0.7);
-  box-shadow: 0 0 15px rgba(169, 1, 109, 0.5);
+  border: 4px solid rgba(93, 1, 169, 0.7);
+  box-shadow: 0 0 15px rgba(105, 1, 169, 0.5);
   animation: spin 8s linear infinite;
   z-index: 1;
-  top: 20px; /* Geser lingkaran lebih ke bawah */
+  top: 10px; /* Geser lebih ke atas */
 }
 
 .profiel::after {
@@ -63,10 +63,10 @@ html, body {
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  border: 2px dashed rgba(116, 1, 135, 0.6);
+  border: 2px dashed rgba(70, 1, 135, 0.6);
   animation: spin-reverse 10s linear infinite;
   z-index: 0;
-  top: 15px; /* Sesuaikan agar tetap dalam lingkaran */
+  top: 5px; /* Geser lebih ke atas */
 }
 
 .profiel > img {
@@ -76,7 +76,7 @@ html, body {
   box-shadow: 0 0 12px rgba(220, 215, 215, 0.9);
   position: relative;
   z-index: 2;
-  margin-top: 35px; /* Geser foto ke bawah agar masuk lingkaran */
+  margin-top: 20px; /* Geser lebih ke atas */
 }
 
 .profiel > h2 {
@@ -88,7 +88,7 @@ html, body {
   letter-spacing: 1.5px;
   text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
   z-index: 3;
-  margin-top: 50px; /* Geser teks lebih ke bawah */
+  margin-top: 35px; /* Geser lebih ke atas */
 }
 
 .link {
@@ -96,7 +96,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 20px;
+  padding: 15px;
   z-index: 1;
 }
 
@@ -113,7 +113,7 @@ html, body {
   text-transform: uppercase;
   font-weight: bold;
   transition: all 0.3s ease-in-out;
-  background: linear-gradient(to right, #a9016d, #740187);
+  background: linear-gradient(to right, #6e01a9, #2b0187);
   box-shadow: 0 0 8px rgba(49, 49, 99, 0.4);
   margin-bottom: 15px;
 }
@@ -140,12 +140,12 @@ html, body {
   .profiel > img {
     width: 100px;
     height: 100px;
-    margin-top: 35px; /* Sesuaikan agar tetap masuk lingkaran */
+    margin-top: 20px; /* Sesuaikan agar tetap masuk lingkaran */
   }
 
   .profiel > h2 {
     font-size: 18px;
-    margin-top: 55px; /* Jarak ke bawah lebih besar di HP kecil */
+    margin-top: 40px; /* Jarak ke bawah lebih kecil agar lebih ke atas */
   }
 
   .link > a {
