@@ -1,18 +1,22 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box; /* Mencegah elemen melampaui batas */
 }
 
 html, body {
   overflow: hidden; /* Mencegah scroll */
-  height: 100vh; /* Memastikan seluruh layar digunakan */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0a0322; /* Warna background agar tidak transparan */
 }
 
 .container {
   width: 100%;
   max-width: 400px;
-  height: 100vh;
-  margin: auto;
+  height: 90vh; /* Agar ada sedikit ruang di layar */
   background: #0a0322;
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
@@ -21,9 +25,8 @@ html, body {
   flex-direction: column;
   align-items: center;
   position: relative;
-  overflow: hidden; /* Mencegah scroll */
+  overflow: hidden;
 }
-
 
 .container::before {
   content: "";
@@ -42,52 +45,55 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative; /* Ganti dari static ke relative */
-  margin-top: 50px; /* Beri jarak dari atas */
+  position: relative;
+  margin-top: 20px;
+  width: 100%;
+  height: 250px; /* Beri batas tinggi agar tidak terlalu besar */
 }
 
 .profiel::before {
-  width: 140px;
-  height: 140px;
+  content: "";
   position: absolute;
-  top: -10px; /* Sesuaikan agar lingkaran tidak naik terlalu jauh */
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid rgba(169, 1, 109, 0.7);
+  box-shadow: 0 0 15px rgba(169, 1, 109, 0.5);
+  animation: spin 8s linear infinite;
   z-index: 1;
 }
 
 .profiel::after {
-  width: 160px;
-  height: 160px;
+  content: "";
   position: absolute;
-  top: -15px; /* Sesuaikan dengan lingkaran */
-  z-index: 2;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  border: 2px dashed rgba(116, 1, 135, 0.6);
+  animation: spin-reverse 10s linear infinite;
+  z-index: 0;
 }
 
 .profiel > img {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 3;
-
+  box-shadow: 0 0 12px rgba(220, 215, 215, 0.9);
+  position: relative;
+  z-index: 2;
 }
 
 .profiel > h2 {
   color: #ffffff;
   font-size: 22px;
   font-weight: bold;
-  margin-top: 20px; /* Sesuaikan agar tidak tertutup tombol */
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
-  position: relative;
-  z-index: 4;
+  margin-top: 20px;
+  z-index: 3;
 }
-
-
 
 @keyframes spin {
   0% { transform: rotate(0deg); }
@@ -104,16 +110,16 @@ html, body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 30px;
+  padding: 20px;
   position: relative;
   z-index: 1;
 }
 
 .link > p {
   color: #ffffff;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
-  margin-bottom: 100px;
+  margin-bottom: 30px;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -135,7 +141,7 @@ html, body {
   transition: all 0.3s ease-in-out;
   background: linear-gradient(to right, #a9016d, #740187);
   box-shadow: 0 0 8px rgba(49, 49, 99, 0.4);
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .link > a:hover {
@@ -152,7 +158,7 @@ html, body {
 
 .foter {
   text-align: center;
-  padding: 30px;
+  padding: 20px;
   position: relative;
   z-index: 1;
 }
@@ -162,16 +168,17 @@ html, body {
   font-size: 22px;
 }
 
+/* RESPONSIVE DESIGN */
 @media screen and (max-width: 600px) {
   .container {
     max-width: 95%;
-    min-height: 100vh;
-    padding: 20px;
+    height: 90vh;
+    padding: 15px;
   }
 
   .profiel {
-    height: auto; /* Biarkan tinggi menyesuaikan */
-    padding: 50px 0; /* Beri ruang agar tidak terlalu rapat */
+    height: auto;
+    padding: 20px 0;
   }
 
   .profiel::before {
@@ -187,13 +194,32 @@ html, body {
   .profiel > img {
     width: 100px;
     height: 100px;
-    position: relative; /* Hapus absolute agar responsif */
-    transform: none; /* Hindari transform yang bisa mempengaruhi posisi */
-    margin-top: 20px; /* Jarak antara foto dan lingkaran */
+    position: relative;
+    transform: none;
+    margin-top: 10px;
   }
 
   .profiel > h2 {
     font-size: 18px;
-    margin-top: 20px; /* Atur agar lebih dekat ke foto */
+    margin-top: 10px;
+  }
+
+  .link {
+    padding: 20px;
+  }
+
+  .link > p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .link > a {
+    font-size: 14px;
+    padding: 12px;
+    width: 80%;
+  }
+
+  .foter {
+    padding: 10px;
   }
 }
