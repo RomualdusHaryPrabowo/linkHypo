@@ -41,7 +41,7 @@ html, body {
   justify-content: center;
   width: 100%;
   position: relative;
-  margin-top: -20px; /* Menggeser lebih ke atas */
+  margin-top: -20px;
 }
 
 .profiel::before {
@@ -54,7 +54,7 @@ html, body {
   box-shadow: 0 0 15px rgba(105, 1, 169, 0.5);
   animation: spin 8s linear infinite;
   z-index: 1;
-  top: 10px; /* Geser lebih ke atas */
+  top: 10px;
 }
 
 .profiel::after {
@@ -66,7 +66,7 @@ html, body {
   border: 2px dashed rgba(70, 1, 135, 0.6);
   animation: spin-reverse 10s linear infinite;
   z-index: 0;
-  top: 5px; /* Geser lebih ke atas */
+  top: 5px;
 }
 
 .profiel > img {
@@ -76,7 +76,7 @@ html, body {
   box-shadow: 0 0 12px rgba(220, 215, 215, 0.9);
   position: relative;
   z-index: 2;
-  margin-top: 20px; /* Geser lebih ke atas */
+  margin-top: 20px;
 }
 
 .profiel > h2 {
@@ -88,7 +88,7 @@ html, body {
   letter-spacing: 1.5px;
   text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
   z-index: 3;
-  margin-top: 35px; /* Geser lebih ke atas */
+  margin-top: 35px;
 }
 
 .link {
@@ -135,17 +135,16 @@ html, body {
   font-size: 18px;
 }
 
-/* Responsif untuk ukuran layar HP kecil */
 @media screen and (max-width: 400px) {
   .profiel > img {
     width: 100px;
     height: 100px;
-    margin-top: 20px; /* Sesuaikan agar tetap masuk lingkaran */
+    margin-top: 20px;
   }
 
   .profiel > h2 {
     font-size: 18px;
-    margin-top: 40px; /* Jarak ke bawah lebih kecil agar lebih ke atas */
+    margin-top: 40px;
   }
 
   .link > a {
